@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b82737">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Isabelle, a little birthday-eve adventure awaits. 24 October. A whole day of us.">
+  <meta property="og:title" content="Isabelle, you've got a date. ♡">
+  <meta property="og:description" content="24 October · A whole day of us · A very important invitation, from your boyfriend.">
+  <meta property="og:type" content="website">
+  <title>Isabelle, you've got a date. ♡</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='20' fill='%23b82737'/%3E%3Cpath d='M40 59L17 37C3 20 29 9 40 26C51 9 77 20 63 37Z' fill='%23fff6e8'/%3E%3C/svg%3E">
+  <style>
+    :root { --paper:#fff8ec; --cream:#f7eedc; --ink:#43272a; --red:#b82737; --muted:#7e6262; --line:#dbc7b8; --pink:#f7dfda; --serif:Georgia,'Times New Roman',serif; --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+    body::before { content:''; display:block; height:9px; background:repeating-linear-gradient(90deg,var(--red) 0 12px,transparent 12px 24px); }
+    button,a,input,textarea { -webkit-tap-highlight-color:transparent; }
+    a { color:inherit; }
+    button { font:inherit; }
+    button,a { touch-action:manipulation; }
+    button { cursor:pointer; }
+    :focus-visible { outline:3px solid #345d66; outline-offset:5px; }
+    .skip { position:fixed; z-index:10; left:16px; top:-100px; background:var(--paper); padding:12px; }
+    .skip:focus { top:12px; }
+    .wrap { width:min(1120px,calc(100% - 80px)); margin:auto; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; padding:28px 0 24px; border-bottom:1px solid var(--line); gap:20px; }
+    .brand { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:650; }
+    .brand svg { width:22px; height:22px; }
+    .top-link { font-size:11px; letter-spacing:1.6px; text-transform:uppercase; text-decoration:none; }
+    .top-link span { margin-left:8px; }
+    .hero { display:grid; grid-template-columns:1.15fr 1fr; gap:65px; align-items:center; padding:65px 0 48px; }
+    .eyebrow { font-size:10px; font-weight:650; letter-spacing:2.5px; line-height:1.6; text-transform:uppercase; color:var(--red); }
+    .greeting { display:block; margin-top:21px; font-family:var(--serif); font-size:25px; font-style:italic; }
+    h1 { font-family:var(--serif); font-weight:400; font-size:clamp(54px,6vw,79px); line-height:1.04; letter-spacing:-3px; margin:12px 0 25px; }
+    h1 em { color:var(--red); font-weight:400; }
+    .underlined { position:relative; display:inline-block; }
+    .underlined::after { content:''; position:absolute; width:96%; left:0; bottom:-9px; height:10px; border-top:2px solid var(--red); border-radius:50%; transform:rotate(-3deg); }
+    .intro { font-size:15px; line-height:1.8; max-width:375px; margin:0; color:var(--muted); }
+    .intro strong { font-weight:600; color:var(--ink); }
+    .hero-action { display:inline-flex; align-items:center; gap:26px; border-bottom:1px solid var(--red); color:var(--red); padding:0 0 7px; margin-top:28px; text-decoration:none; font-size:13px; font-weight:600; }
+    .little-note { font-family:var(--serif); font-style:italic; font-size:16px; margin-top:24px; color:var(--muted); display:flex; align-items:center; gap:10px; }
+    .little-note svg { width:38px; height:24px; }
+    .ticket-wrap { position:relative; padding:20px 10px 10px; }
+    .ticket { position:relative; background:var(--paper); border:1px solid var(--line); box-shadow:8px 9px 0 #e8dbc6,0 15px 30px #43272a08; transform:rotate(3deg); padding:30px 30px 0; }
+    .ticket::before { content:''; position:absolute; z-index:1; width:90px; height:24px; left:calc(50% - 45px); top:-13px; background:#e4cfb8b8; transform:rotate(-7deg); }
+    .ticket-header { display:flex; justify-content:space-between; align-items:center; gap:20px; font-size:9px; letter-spacing:1.6px; text-transform:uppercase; color:var(--red); }
+    .ticket-header span:last-child { border:1px solid var(--red); padding:5px 7px; transform:rotate(-8deg); }
+    .cake { display:block; width:210px; height:160px; margin:15px auto 0; overflow:visible; }
+    .flame { transform-origin:136px 34px; animation:flicker 3s ease-in-out infinite; }
+    .ticket-date { display:flex; align-items:center; justify-content:center; gap:14px; margin-top:4px; }
+    .day { font:96px/.95 var(--serif); letter-spacing:-5px; color:var(--red); }
+    .month { font:29px/1.15 var(--serif); }
+    .year { font:10px/2.5 var(--sans); text-transform:uppercase; letter-spacing:2px; color:var(--muted); }
+    .ticket-tagline { text-align:center; font:italic 16px var(--serif); margin:17px 0 22px; }
+    .ticket-bottom { position:relative; margin:0 -30px; padding:20px 22px; display:grid; grid-template-columns:1fr 1fr; border-top:1px dashed var(--line); text-align:center; }
+    .ticket-bottom::before,.ticket-bottom::after { content:''; position:absolute; width:16px; height:16px; border:1px solid var(--line); border-radius:50%; background:var(--cream); top:-9px; }
+    .ticket-bottom::before { left:-9px; border-left:none; } .ticket-bottom::after { right:-9px; border-right:none; }
+    .ticket-bottom div+div { border-left:1px solid var(--line); }
+    .label { font-size:9px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); display:block; margin-bottom:7px; }
+    .value { font-size:13px; font-weight:600; }
+    .seal { position:absolute; top:7px; right:-7px; width:87px; height:87px; padding:13px; border-radius:50%; background:var(--red); color:var(--paper); border:4px double #e79596; transform:rotate(16deg); font-size:10px; line-height:1.7; letter-spacing:1px; font-weight:600; text-transform:uppercase; text-align:center; z-index:2; }
+    .seal b { display:block; font:22px/1.05 var(--serif); }
+    .divider { display:flex; align-items:center; gap:18px; margin:10px 0 30px; color:var(--red); }
+    .divider::before,.divider::after { content:''; height:1px; flex:1; background:var(--line); }
+    .divider span { font:20px var(--serif); }
+    .agenda { display:grid; grid-template-columns:repeat(3,1fr); padding:0 0 38px; }
+    .agenda-item { padding:0 26px; display:flex; gap:15px; }
+    .agenda-item:first-child { padding-left:0; }
+    .agenda-item:last-child { padding-right:0; }
+    .agenda-item+.agenda-item { border-left:1px solid var(--line); }
+    .number { font:italic 20px var(--serif); color:var(--red); padding-top:3px; }
+    .agenda h2 { font:21px var(--serif); margin:0 0 8px; }
+    .agenda p { font-size:12px; line-height:1.8; color:var(--muted); margin:0; }
+    .rsvp { background:var(--pink); padding:40px 35px 30px; text-align:center; border:1px solid #e8c4bf; border-radius:3px; position:relative; scroll-margin-top:20px; }
+    .rsvp h2 { font:38px/1.15 var(--serif); margin:10px 0 12px; letter-spacing:-1px; }
+    .rsvp-sub { font-size:13px; color:var(--muted); line-height:1.7; margin:0 auto 23px; }
+    .buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:14px; min-height:49px; padding:14px 22px; border:1px solid var(--red); border-radius:4px; font-size:13px; font-weight:600; text-decoration:none; transition:background .18s,transform .18s; }
+    .button:hover { transform:translateY(-2px); }
+    .primary { background:var(--red); color:var(--paper); }
+    .primary:hover { background:#99202e; }
+    .secondary { background:transparent; color:var(--red); }
+    .secondary:hover { background:#b827370a; }
+    .pitch { color:var(--red); font:italic 16px/1.6 var(--serif); min-height:26px; margin:18px auto 0; max-width:470px; }
+    .raincheck { margin:10px auto 0; }
+    .raincheck button { border:0; padding:10px; background:none; color:var(--muted); font-size:11px; text-decoration:underline; text-underline-offset:3px; }
+    .footnote { margin:25px 0 0; font:italic 14px/1.6 var(--serif); color:var(--muted); }
+    footer { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:27px 0 30px; font-size:10px; color:var(--muted); }
+    .signoff { font:italic 16px var(--serif); color:var(--red); }
+    .end-heart { display:inline-block; padding:0 3px; }
+    dialog { background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:30px; width:min(440px,calc(100% - 28px)); max-height:90dvh; overflow:auto; box-shadow:0 24px 70px #43272a30; }
+    dialog::backdrop { background:#43272a65; backdrop-filter:blur(3px); }
+    .close { position:absolute; top:9px; right:9px; width:42px; height:42px; border:0; color:var(--muted); background:transparent; font-size:25px; }
+    .modal-heart { color:var(--red); font:40px/1 var(--serif); margin-bottom:15px; }
+    dialog h2 { font:35px/1.1 var(--serif); letter-spacing:-1px; margin:0 0 15px; padding-right:20px; }
+    .modal-copy { font-size:13px; line-height:1.7; color:var(--muted); }
+    .note-label { display:block; font-size:11px; font-weight:600; margin:22px 0 9px; }
+    textarea { background:#ffffff70; border:1px solid var(--line); color:var(--ink); border-radius:4px; width:100%; min-height:80px; resize:vertical; font:14px/1.5 var(--sans); padding:12px; }
+    .message { background:var(--cream); border-left:2px solid var(--red); padding:13px; font-size:12px; line-height:1.7; margin:18px 0; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .send-buttons { display:grid; gap:10px; }
+    .send-buttons .button { width:100%; }
+    .send-buttons svg { width:18px; height:18px; }
+    .send-hint { font-size:10px; color:var(--muted); line-height:1.7; margin:14px 0 0; text-align:center; }
+    .modal-extras { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 20px; margin-top:18px; }
+    .text-button { background:transparent; color:var(--red); font-size:11px; padding:8px 0; border:0; border-bottom:1px solid var(--line); }
+    .status { font-size:11px; text-align:center; color:var(--red); min-height:20px; margin:12px 0 0; }
+    .confetti { pointer-events:none; position:fixed; z-index:5; top:-20px; width:9px; height:13px; animation:fall 2.4s ease-in forwards; }
+    noscript { display:block; margin:24px; padding:20px; text-align:center; line-height:1.8; border:1px solid var(--line); }
+    @keyframes fall { to { transform:translateY(105vh) rotate(640deg); opacity:0; } }
+    @keyframes flicker { 0%,100% { transform:rotate(-3deg); } 50% { transform:rotate(4deg); } }
+    @media(min-width:1300px) { .hero { padding-top:75px; } }
+    @media(max-width:850px) { .wrap { width:calc(100% - 48px); } .hero { gap:30px; } h1 { font-size:61px; } .ticket { padding:27px 22px 0; } .ticket-bottom { margin:0 -22px; } .agenda-item { padding:0 16px; gap:10px; } }
+    @media(max-width:640px) {
+      .wrap { width:calc(100% - 40px); max-width:430px; }
+      .topbar { padding:22px 0 20px; gap:8px; } .brand { font-size:11px; gap:7px; } .top-link { font-size:9px; letter-spacing:1px; } .brand svg { width:18px; }
+      .hero { grid-template-columns:1fr; gap:27px; padding:38px 0 30px; }
+      .eyebrow { font-size:9px; letter-spacing:2px; } .greeting { font-size:24px; margin-top:17px; }
+      h1 { font-size:clamp(49px,14.5vw,67px); letter-spacing:-2.5px; margin-bottom:25px; }
+      .intro { font-size:14px; max-width:340px; } .hero-action { margin-top:22px; } .little-note { margin-top:18px; font-size:15px; }
+      .ticket-wrap { width:calc(100% - 14px); max-width:335px; margin:0 auto; padding-top:13px; }
+      .ticket { transform:rotate(2deg); padding:25px 22px 0; } .ticket-bottom { margin:0 -22px; padding:18px 15px; }
+      .cake { width:180px; height:133px; margin-top:10px; } .day { font-size:84px; } .month { font-size:27px; } .ticket-tagline { font-size:15px; margin:14px 0 20px; }
+      .seal { width:76px; height:76px; padding:10px; top:-2px; right:-8px; font-size:8px; } .seal b { font-size:21px; }
+      .divider { margin-top:16px; margin-bottom:26px; }
+      .agenda { grid-template-columns:1fr; gap:22px; padding-bottom:30px; }
+      .agenda-item,.agenda-item:first-child,.agenda-item:last-child { padding:0 5px; gap:17px; } .agenda-item+.agenda-item { border-left:0; }
+      .agenda h2 { font-size:23px; margin-bottom:4px; } .agenda p { font-size:12px; } .number { width:25px; padding-top:2px; font-size:21px; }
+      .rsvp { padding:30px 18px 24px; } .rsvp h2 { font-size:34px; } .rsvp-sub { font-size:12px; }
+      .buttons { flex-direction:column; gap:10px; } .button { min-height:50px; padding:14px 16px; } .pitch { font-size:15px; }
+      footer { padding:25px 0 28px; gap:12px; align-items:flex-start; } .signoff { font-size:15px; } .footer-small { max-width:130px; text-align:right; line-height:1.6; }
+      dialog { padding:27px 22px 22px; } dialog h2 { font-size:33px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#rsvp">Skip to RSVP</a>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20S2 14 2 7.7C2 2.2 9.3 1.3 12 6c2.7-4.7 10-3.8 10 1.7C22 14 12 20 12 20Z" stroke="#b82737" stroke-width="1.5"></path></svg>a very important invitation</div>
+      <a class="top-link" href="#rsvp">RSVP <span aria-hidden="true">↗</span></a>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="invite-title">
+        <div class="letter">
+          <div class="eyebrow">For my favourite birthday girl</div>
+          <span class="greeting">Dear Isabelle,</span>
+          <h1 id="invite-title">You're invited<br>to a whole<br>day of <em class="underlined">us.</em></h1>
+          <p class="intro">Your birthday is on the 25th. But waiting until then to spoil you? <strong>Absolutely unreasonable.</strong><br>So I'm stealing you for the 24th.</p>
+          <a class="hero-action" href="#rsvp">Shall we make it a date? <span aria-hidden="true">↓</span></a>
+          <div class="little-note"><svg viewBox="0 0 50 30" fill="none" aria-hidden="true"><path d="M2 5C25 28 30 26 44 12M34 13l11-2-4 11" stroke="#b82737" stroke-width="1.4" stroke-linecap="round"></path></svg>Yes, I made you a whole website.</div>
+        </div>
+        <div class="ticket-wrap">
+          <div class="seal" aria-hidden="true">Admit<b>ONE</b>cutie ♡</div>
+          <article class="ticket" aria-label="Date details: Saturday 24 October 2026, all day, secret location">
+            <div class="ticket-header"><span>The birthday-eve edition</span><span>Just us two</span></div>
+            <svg class="cake" viewBox="0 0 270 205" fill="none" aria-hidden="true">
+              <path d="M28 43l6 7m-2-14-4 7-7 1m211 33 8-6m-8-4 8 4 2 9M40 119l-8 3m198 17 10 5" stroke="#b82737" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M67 53c-5-11-16-2-10 4l10 9 10-9c6-6-5-15-10-4ZM211 34c-3-7-10-2-7 3l7 6 7-6c3-5-4-10-7-3Z" fill="#b82737"></path>
+              <ellipse cx="136" cy="178" rx="103" ry="12" fill="#f0deca"></ellipse>
+              <path d="M32 173c22 16 185 15 207-1" stroke="#b82737" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M61 112h149v55c0 15-149 15-149 0Z" fill="#f0c4bb" stroke="#b82737" stroke-width="2"></path>
+              <path d="M61 144c24 10 119 10 149 0" stroke="#b82737" stroke-width="2"></path>
+              <ellipse cx="135.5" cy="110" rx="74.5" ry="20" fill="#fff8ec" stroke="#b82737" stroke-width="2"></ellipse>
+              <path d="M62 110c0 8 7 13 14 15 3 1 4 6 4 12 0 10 13 10 13 0v-4c0-3 3-5 7-4 10 1 20 2 27 2 5 0 6 3 6 7v6c0 11 14 12 14 0v-8c0-3 2-5 5-5 22-1 45-5 57-13" fill="#fff8ec"></path>
+              <path d="M62 110c0 8 7 13 14 15 3 1 4 6 4 12 0 10 13 10 13 0v-4c0-3 3-5 7-4 10 1 20 2 27 2 5 0 6 3 6 7v6c0 11 14 12 14 0v-8c0-3 2-5 5-5 22-1 45-5 57-13" stroke="#b82737" stroke-width="2"></path>
+              <rect x="130" y="50" width="11" height="54" rx="2" fill="#fff8ec" stroke="#b82737" stroke-width="2"></rect>
+              <path d="m131 62 9-6m-9 20 9-6m-9 20 9-6" stroke="#b82737" stroke-width="2"></path>
+              <path class="flame" d="M136 43c-18-6-4-21 0-27 4 7 18 22 0 27Z" fill="#e69b43" stroke="#b82737" stroke-width="1.5"></path>
+              <path d="M88 104l3 2m86-6 3-2m-62 13 3-2m38-6 3 2" stroke="#b82737" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="100" cy="153" r="2" fill="#b82737"></circle><circle cx="170" cy="159" r="2" fill="#b82737"></circle><circle cx="189" cy="131" r="2" fill="#b82737"></circle>
+            </svg>
+            <div class="ticket-date"><span class="day">24</span><div><div class="month">October</div><div class="year">Saturday · 2026</div></div></div>
+            <p class="ticket-tagline">A little early. A lot of love.</p>
+            <div class="ticket-bottom"><div><span class="label">When</span><span class="value">The whole day</span></div><div><span class="label">Where</span><span class="value">That's my secret ♡</span></div></div>
+          </article>
+        </div>
+      </section>
+      <div class="divider" aria-hidden="true"><span>♡</span></div>
+      <section class="agenda" aria-label="The very unofficial itinerary">
+        <div class="agenda-item"><span class="number" aria-hidden="true">01</span><div><h2>You show up.</h2><p>Bring your cute self. That's the entire job description.</p></div></div>
+        <div class="agenda-item"><span class="number" aria-hidden="true">02</span><div><h2>I do the plotting.</h2><p>The plan is classified. Your boyfriend is suspiciously excited.</p></div></div>
+        <div class="agenda-item"><span class="number" aria-hidden="true">03</span><div><h2>We make a day of it.</h2><p>No rushing. Just you, me, and a very good excuse to celebrate.</p></div></div>
+      </section>
+      <section class="rsvp" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="eyebrow">One tiny question</div>
+        <h2 id="rsvp-title">So… are you my date?</h2>
+        <p class="rsvp-sub">Your presence is requested. Your hand-holding privileges are included.</p>
+        <div class="buttons"><button class="button primary" id="yes">Obviously. It's a date! <span aria-hidden="true">♡</span></button><button class="button secondary" id="convince">Hmm… convince me</button></div>
+        <p class="pitch" id="pitch" role="status" aria-live="polite">A very biased source says your date is quite the catch.</p>
+        <div class="raincheck"><button id="raincheck">I need a rain check</button></div>
+        <p class="footnote">P.S. Your birthday may be on the 25th.<br>The spoiling starts a day early.</p>
+      </section>
+      <noscript>It's a date? Let me know at <a href="mailto:alvinxjm@gmail.com?subject=Isabelle%27s%20birthday%20date%20RSVP">alvinxjm@gmail.com</a> or <a href="https://t.me/alvinmjx">@alvinmjx on Telegram</a>. Saturday, 24 October 2026 · all day.</noscript>
+    </main>
+    <footer><span class="signoff">With love &amp; questionable subtlety,<br>your boyfriend <span class="end-heart">♡</span></span><span class="footer-small">Made for one very special person.</span></footer>
+  </div>
+  <dialog id="reply" aria-labelledby="reply-title" aria-describedby="reply-description">
+    <button class="close" id="close" aria-label="Close RSVP">×</button>
+    <div class="modal-heart" aria-hidden="true">♡</div>
+    <h2 id="reply-title">Excellent taste,<br>birthday girl.</h2>
+    <p class="modal-copy" id="reply-description">A whole day of us it is. Send me your RSVP to make it official. I promise to act only moderately excited.</p>
+    <label class="note-label" for="note">Any demands, darling? <span style="font-weight:400">(optional)</span></label>
+    <textarea id="note" maxlength="500" placeholder="e.g. I expect dessert. And compliments."></textarea>
+    <p class="message" id="message">It's a date! ♡
+
+I'm saying yes to our whole-day birthday-eve date on Saturday, 24 October 2026. Secret location, very cute company.
+
+Love, Isabelle</p>
+    <div class="send-buttons">
+      <a class="button primary" id="email" href="mailto:alvinxjm@gmail.com?subject=It's%20a%20date!%20%E2%80%94%20Isabelle's%20RSVP%2C%2024%20October&amp;body=It's%20a%20date!%20%E2%99%A1%0A%0AI'm%20saying%20yes%20to%20our%20whole-day%20birthday-eve%20date%20on%20Saturday%2C%2024%20October%202026.%20Secret%20location%2C%20very%20cute%20company.%0A%0ALove%2C%20Isabelle"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"></rect><path d="m3 6 9 7 9-7" stroke="currentColor" stroke-width="1.5"></path></svg>Reply by email <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" id="telegram" href="https://t.me/alvinmjx?text=It's%20a%20date!%20%E2%99%A1%0A%0AI'm%20saying%20yes%20to%20our%20whole-day%20birthday-eve%20date%20on%20Saturday%2C%2024%20October%202026.%20Secret%20location%2C%20very%20cute%20company.%0A%0ALove%2C%20Isabelle" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 10 18-7-4 18-6-6-4 3v-6l10-6-8 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>Reply on Telegram <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="send-hint">Email me, Telegram me, or both for dramatic effect.<br>Your message is ready — just tap Send in the app.</p>
+    <div class="modal-extras"><button class="text-button" id="calendar">Save our date</button><button class="text-button" id="copy">Copy my reply</button></div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </dialog>
+  <script>
+    (() => {
+      'use strict';
+      const $ = id => document.getElementById(id);
+      const dialog = $('reply');
+      let answer = 'yes';
+      let persuasion = 0;
+      const pitches = [
+        'Exhibit A: an entire day of my undivided attention. Very exclusive.',
+        'Exhibit B: I planned a surprise. You only have to be cute. Suspiciously good deal.',
+        'Exhibit C: birthday-eve privileges include stealing all my hand-holding time.',
+        'Final offer: you + me + a whole day. I am willing to negotiate in kisses.'
+      ];
+      function messageText() {
+        const note = $('note').value.trim();
+        const base = answer === 'yes'
+          ? "It's a date! ♡\n\nI'm saying yes to our whole-day birthday-eve date on Saturday, 24 October 2026. Secret location, very cute company.\n\nLove, Isabelle"
+          : "Can we find another day? ♡\n\nAbout our birthday-eve date on Saturday, 24 October 2026: I need a rain check. Let's plan another lovely day together.\n\nLove, Isabelle";
+        return base + (note ? '\n\nP.S. ' + note : '');
+      }
+      function updateReply() {
+        const message = messageText();
+        $('message').textContent = message;
+        const subject = answer === 'yes' ? "It's a date! — Isabelle's RSVP, 24 October" : "Rain check — Isabelle's RSVP, 24 October";
+        $('email').href = 'mailto:alvinxjm@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+        $('telegram').href = 'https://t.me/alvinmjx?text=' + encodeURIComponent(message);
+      }
+      function confetti() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const colors = ['#b82737', '#e69b43', '#f0c4bb', '#b7b69a'];
+        for (let i = 0; i < 30; i++) {
+          const piece = document.createElement('span');
+          piece.className = 'confetti';
+          piece.setAttribute('aria-hidden', 'true');
+          piece.style.left = Math.random() * 100 + '%';
+          piece.style.background = colors[i % colors.length];
+          piece.style.animationDelay = Math.random() * .5 + 's';
+          piece.style.borderRadius = i % 3 === 0 ? '50%' : '1px';
+          document.body.appendChild(piece);
+          setTimeout(() => piece.remove(), 3100);
+        }
+      }
+      function openReply(choice) {
+        answer = choice;
+        $('reply-title').textContent = choice === 'yes' ? 'Excellent taste, birthday girl.' : 'Rain check? Still my favourite.';
+        $('reply-description').textContent = choice === 'yes'
+          ? 'A whole day of us it is. Send me your RSVP to make it official. I promise to act only moderately excited.'
+          : 'Of course, darling. Let me know what works for you and we’ll find another day for the spoiling.';
+        $('calendar').hidden = choice !== 'yes';
+        $('status').textContent = '';
+        updateReply();
+        dialog.showModal();
+        if (choice === 'yes') confetti();
+      }
+      $('yes').addEventListener('click', () => openReply('yes'));
+      $('raincheck').addEventListener('click', () => openReply('raincheck'));
+      $('convince').addEventListener('click', () => {
+        $('pitch').textContent = pitches[Math.min(persuasion, pitches.length - 1)];
+        persuasion++;
+        if (persuasion >= pitches.length) $('convince').textContent = 'Fine. You had me at kisses.';
+        if (persuasion > pitches.length) openReply('yes');
+      });
+      $('close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return;
+        const rect = dialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+      });
+      $('note').addEventListener('input', updateReply);
+      $('copy').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(messageText());
+          $('status').textContent = 'Copied! Now paste it into our chat.';
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents($('message'));
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          $('status').textContent = 'Reply selected. Press and hold to copy it.';
+        }
+      });
+      $('calendar').addEventListener('click', () => {
+        const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+        const lines = [
+          'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Birthday Invitation//EN', 'CALSCALE:GREGORIAN',
+          'BEGIN:VEVENT', 'UID:isabelle-birthday-eve-20261024@alvinxjm.github.io', 'DTSTAMP:' + stamp,
+          'DTSTART;VALUE=DATE:20261024', 'DTEND;VALUE=DATE:20261025',
+          'SUMMARY:Birthday-eve date with your boyfriend', 'LOCATION:A surprise',
+          'DESCRIPTION:A whole day of us. The location is a secret.', 'END:VEVENT', 'END:VCALENDAR'
+        ];
+        const blob = new Blob([lines.join('\r\n') + '\r\n'], {type:'text/calendar;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'our-date-24-october.ics';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        $('status').textContent = 'Open the calendar file to save 24 October. ♡';
+      });
+      updateReply();
+    })();
+  </script>
+
+
+</body>
+</html>
